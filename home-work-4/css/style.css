@@ -1,0 +1,43 @@
+body {
+  background-color: rgb(58, 170, 179);
+}
+
+p {
+  color: red;
+}
+
+.text {
+  color: blueviolet;
+}
+
+#text-id {
+  color: gold;
+}
+
+div > p {
+  color: blue;
+}
+
+h1 + p {
+  color: brown;
+}
+
+.container p {
+  color: yellowgreen;
+}
+
+a[href*="page"] {
+  color: green;
+}
+
+div.text-2 {
+  color: orange;
+}
+
+h3 ~ p {
+  color: chocolate;
+}
+
+#text-id2.text-3 {
+  color: olive;
+}

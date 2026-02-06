@@ -1,0 +1,46 @@
+body {
+  background-color: seashell;
+}
+
+table {
+  border: 10px solid black;
+  width: 900px;
+  height: 800px;
+  border-collapse: collapse;
+  padding: 0;
+  margin: 20px auto;
+}
+
+td {
+  border: 8px solid black;
+  text-align: center;
+  vertical-align: middle;
+  background: white;
+  padding: 0;
+  width: 40px;
+}
+
+tr {
+  height: 50px;
+}
+
+.container {
+  padding: 0 calc(50vw - 640px);
+  background-color: white;
+}
+
+.gold {
+  background: gold;
+}
+
+.red {
+  background: red;
+}
+
+.black {
+  background: black;
+}
+
+.blue {
+  background: blue;
+}
