@@ -52,7 +52,6 @@ body {
 }
 
 .promo-section {
-  /* height: 364px;  */ /* прибрав фіксовану висоту, бо вона трішки ломає логіку */
   padding-block: 5rem;
   display: flex;
   flex-direction: column;
@@ -175,14 +174,14 @@ p {
 }
 
 .background-img {
-  max-height: 600px;
+  max-width: 100%;
   display: block;
   fill: #000000;
 }
 
 .top-img {
-  max-width: 100px;
-  max-height: 100px;
+  width: 6.25rem;
+  height: auto;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -199,6 +198,7 @@ p {
   display: flex;
   justify-content: space-between;
   gap: 25px;
+  flex-wrap: wrap;
 }
 
 .stats__item {
@@ -272,5 +272,119 @@ p {
 @media screen and (max-width: 375px) {
   .content {
     padding-inline: 12px;
+  }
+
+  .stats__item {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .stats__content {
+    text-align: center;
+  }
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #000;
+  transition: 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .stats__item {
+    width: calc(50% - 12.5px);
+    padding: 40px 0;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 2rem;
+    position: relative;
+  }
+
+  .promo-section__paragraph {
+    width: 100%;
+    text-align: center;
+  }
+
+  .promo-section__button {
+    align-self: center;
+  }
+
+  .promo-section__title {
+    text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+    padding-left: 1rem;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--color-surface-primary);
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .menu-toggle:checked ~ .nav {
+    max-height: 400px;
+  }
+
+  .menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+@media screen and (max-width: 1280px) {
+  .video__container {
+    align-items: center;
+  }
+  .top-img {
+    width: 15%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .video__container {
+    align-items: center;
+  }
+  .top-img {
+    width: 15%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 375px) {
+  .video__container {
+    align-items: center;
   }
 }
