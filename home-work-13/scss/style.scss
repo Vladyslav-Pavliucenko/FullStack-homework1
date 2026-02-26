@@ -1,0 +1,102 @@
+@use "sass:map";
+// задаю ширину обводки для всіх фигур
+$stroke-width: 5px;
+
+// задаю кольори для всіх фігур (заливку і обводку)
+$stoke-colors: (
+  circle-fill: #9acd32,
+  circle-stroke: #63c273,
+  square-fill: #0000ff,
+  square-stroke: #0e0e63,
+  rect-fill: #800080,
+  rect-stroke: #2a0b41,
+  ellipse-fill: #db6e07e3,
+  ellipse-stroke: #ca7c1cf5,
+);
+
+body {
+  background-color: aqua;
+}
+
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  color: #292a7a;
+}
+svg {
+  display: block;
+  background: rgb(0, 0, 0);
+  overflow: visible;
+  margin: 20px auto;
+}
+
+.form {
+  stroke-width: $stroke-width;
+}
+
+.circle {
+  fill: map.get($stoke-colors, circle-fill);
+  stroke: map.get($stoke-colors, circle-stroke);
+}
+.rectangle {
+  fill: map.get($stoke-colors, rect-fill);
+  stroke: map.get($stoke-colors, rect-stroke);
+}
+.square {
+  fill: map.get($stoke-colors, square-fill);
+  stroke: map.get($stoke-colors, square-stroke);
+}
+.ellipse {
+  fill: map.get($stoke-colors, ellipse-fill);
+  stroke: map.get($stoke-colors, ellipse-stroke);
+}
+
+.orbit {
+  transform-origin: 200px 200px;
+  transform-box: fill-box;
+  animation: rotateOrbit linear infinite;
+}
+
+.orbit-1 {
+  animation-duration: 4s;
+}
+
+.orbit-2 {
+  animation-duration: 6s;
+}
+
+.orbit-3 {
+  animation-duration: 7s;
+}
+
+.orbit-4 {
+  animation-duration: 10s;
+}
+
+@keyframes rotateOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animated {
+  animation: chargeColor 4s infinite ease-in-out;
+}
+
+@keyframes chargeColor {
+  0% {
+    fill: #800080;
+    stroke: #2a0b41;
+  }
+  50% {
+    fill: #fcff2fe5;
+    stroke: #8ec004f5;
+  }
+  100% {
+    fill: #800080;
+    stroke: #2a0b41;
+  }
+}

@@ -1,0 +1,89 @@
+body {
+  background-color: aqua;
+}
+
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  color: #292a7a;
+}
+
+svg {
+  display: block;
+  background: rgb(0, 0, 0);
+  overflow: visible;
+  margin: 20px auto;
+}
+
+.form {
+  stroke-width: 5px;
+}
+
+.circle {
+  fill: #9acd32;
+  stroke: #63c273;
+}
+
+.rectangle {
+  fill: #800080;
+  stroke: #2a0b41;
+}
+
+.square {
+  fill: #0000ff;
+  stroke: #0e0e63;
+}
+
+.ellipse {
+  fill: rgba(219, 110, 7, 0.8901960784);
+  stroke: rgba(202, 124, 28, 0.9607843137);
+}
+
+.orbit {
+  transform-origin: 200px 200px;
+  transform-box: fill-box;
+  animation: rotateOrbit linear infinite;
+}
+
+.orbit-1 {
+  animation-duration: 4s;
+}
+
+.orbit-2 {
+  animation-duration: 6s;
+}
+
+.orbit-3 {
+  animation-duration: 7s;
+}
+
+.orbit-4 {
+  animation-duration: 10s;
+}
+
+@keyframes rotateOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animated {
+  animation: chargeColor 4s infinite ease-in-out;
+}
+
+@keyframes chargeColor {
+  0% {
+    fill: #800080;
+    stroke: #2a0b41;
+  }
+  50% {
+    fill: rgba(252, 255, 47, 0.8980392157);
+    stroke: rgba(142, 192, 4, 0.9607843137);
+  }
+  100% {
+    fill: #800080;
+    stroke: #2a0b41;
+  }
+}/*# sourceMappingURL=style.css.map */
