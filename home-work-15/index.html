@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="uk" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameStore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="bg-gray-800 sticky top-0 z-50">
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <h1 class="text-2xl font-bold text-green-400">🎮 GameStore</h1>
+        <input
+          type="text"
+          placeholder="Пошук ігор..."
+          class="bg-gray-700 px-3 py-2 rounded-lg outline-none"
+        />
+      </div>
+    </header>
+
+    <section class="relative">
+      <img
+        src="./img/Cyberpunk-2077-Phantom-Libertyjpg.jpg"
+        alt="Cyberpunk 2077"
+        class="w-full h-96 object-cover opacity-50"
+      />
+      <div
+        class="absolute inset-0 flex flex-col justify-center items-start p-10"
+      >
+        <h2 class="text-4xl font-bold mb-4">Cyberpunk 2077</h2>
+        <p class="mb-4 text-gray-300">Відкрий нічне місто майбутнього</p>
+        <button
+          class="bg-green-500 px-6 py-3 rounded-xl hover:bg-green-600 transition"
+        >
+          Купити
+        </button>
+      </div>
+    </section>
+
+    <section class="container mx-auto py-10 px-4">
+      <h2 class="text-2xl font-bold mb-6">Категорії</h2>
+      <div class="flex gap-4 flex-wrap">
+        <span
+          class="bg-gray-800 px-4 py-2 rounded-lg hover:bg-green-500 cursor-pointer"
+          >RPG</span
+        >
+        <span
+          class="bg-gray-800 px-4 py-2 rounded-lg hover:bg-green-500 cursor-pointer"
+          >Shooter</span
+        >
+        <span
+          class="bg-gray-800 px-4 py-2 rounded-lg hover:bg-green-500 cursor-pointer"
+          >Racing</span
+        >
+        <span
+          class="bg-gray-800 px-4 py-2 rounded-lg hover:bg-green-500 cursor-pointer"
+          >Open World</span
+        >
+      </div>
+    </section>
+
+    <section class="container mx-auto py-10 px-4 grid md:grid-cols-4 gap-6">
+      <div
+        class="bg-gray-800 rounded-xl overflow-hidden hover:scale-105 transition"
+      >
+        <img src="./img/GTA.jpg" alt="GTA V" class="h-40 w-full object-cover" />
+        <div class="p-4">
+          <h3 class="font-bold">GTA V</h3>
+          <p class="text-gray-400 text-sm">Open World</p>
+          <p class="text-green-400 mt-2">₴499</p>
+        </div>
+      </div>
+
+      <div
+        class="bg-gray-800 rounded-xl overflow-hidden hover:scale-105 transition"
+      >
+        <img src="./img/CS2.jpg" alt="CS2" class="h-40 w-full object-cover" />
+        <div class="p-4">
+          <h3 class="font-bold">CS2</h3>
+          <p class="text-gray-400 text-sm">Shooter</p>
+          <p class="text-green-400 mt-2">Безкоштовно</p>
+        </div>
+      </div>
+
+      <div
+        class="bg-gray-800 rounded-xl overflow-hidden hover:scale-105 transition"
+      >
+        <img
+          src="./img/Cyberpunk2077.jpg"
+          alt="Cyberpunk 2077"
+          class="h-40 w-full object-cover"
+        />
+        <div class="p-4">
+          <h3 class="font-bold">Cyberpunk 2077</h3>
+          <p class="text-gray-400 text-sm">RPG</p>
+          <p class="text-green-400 mt-2">₴899</p>
+        </div>
+      </div>
+
+      <div
+        class="bg-gray-800 rounded-xl overflow-hidden hover:scale-105 transition"
+      >
+        <img
+          src="./img/forza.jpg"
+          alt="Forza Horizon 5"
+          class="h-40 w-full object-cover"
+        />
+        <div class="p-4">
+          <h3 class="font-bold">Forza Horizon 5</h3>
+          <p class="text-gray-400 text-sm">Racing</p>
+          <p class="text-green-400 mt-2">₴799</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-800 text-slate-300 p-4 text-gray-500">
+      © 2026 GameStore
+      <div class="flex gap-5">
+        <a href="#" class="hover:text-slate-300 text-gray-500"
+          >Privacy Policy</a
+        >
+        <a href="#" class="hover:text-slate-300 text-gray-500"
+          >Terms of Service</a
+        >
+        <a href="#" class="hover:text-slate-300 text-gray-500"
+          >Cookie Settings</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
